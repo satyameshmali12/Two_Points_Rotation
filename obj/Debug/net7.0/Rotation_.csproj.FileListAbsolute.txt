@@ -1,0 +1,15 @@
+C:\Users\satya\Desktop\Rotation_\bin\Debug\net7.0\Rotation_.exe
+C:\Users\satya\Desktop\Rotation_\bin\Debug\net7.0\Rotation_.deps.json
+C:\Users\satya\Desktop\Rotation_\bin\Debug\net7.0\Rotation_.runtimeconfig.json
+C:\Users\satya\Desktop\Rotation_\bin\Debug\net7.0\Rotation_.dll
+C:\Users\satya\Desktop\Rotation_\bin\Debug\net7.0\Rotation_.pdb
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\Rotation_.csproj.AssemblyReference.cache
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\Rotation_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\Rotation_.AssemblyInfoInputs.cache
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\Rotation_.AssemblyInfo.cs
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\Rotation_.csproj.CoreCompileInputs.cache
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\Rotation_.dll
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\refint\Rotation_.dll
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\Rotation_.pdb
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\Rotation_.genruntimeconfig.cache
+C:\Users\satya\Desktop\Rotation_\obj\Debug\net7.0\ref\Rotation_.dll
