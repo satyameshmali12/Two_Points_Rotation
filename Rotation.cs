@@ -1,21 +1,18 @@
 using System;
+using System.Collections;
+using Godot;
 
-namespace Rotation_Algo;
-
-public class Rotation
+public class TwoPointRot
 {
-
-
     /// <summary>
     /// <para>Gives the rotation with respect to the origin_cordinates and the target_cordinated</para>
     ///</summary>
-    public float GetRotation(Vector2 origin_cordinates, Vector2 target_cordinates)
+    public static float GetRotation(Vector2 origin_cordinates, Vector2 target_cordinates)
     {
 
         // configuring the target_cordinates to get it's position when measure from the 0,0 (origin)
         Vector2 updated_tc = target_cordinates - origin_cordinates;
-        Vector2 abs_updated_tc = new Vector2(Math.Abs(updated_tc.X), Math.Abs(updated_tc.Y));
-
+        Vector2 abs_updated_tc = new Vector2(Math.Abs(updated_tc.x), Math.Abs(updated_tc.y));
         /*
 
         Explanation
@@ -48,14 +45,15 @@ public class Rotation
        At last,according to the quadrant as per given point with respect to the origin is incremented to the origin_angle;
 
        Make sure to change the quadrant setting in the last if you feel it wrong with yours framwork axis arrangement.
-       The quadrant settings in this are with respect to the Godod.
+       The quadrant settings in this are with respect to the Godot.
+
         */
 
 
 
         // finding ratios
-        float x_p = abs_updated_tc.Y / abs_updated_tc.X;
-        float y_p = abs_updated_tc.X / abs_updated_tc.Y;
+        float x_p = abs_updated_tc.y / abs_updated_tc.x;
+        float y_p = abs_updated_tc.x / abs_updated_tc.y;
 
         float per_p = 90 / (x_p + y_p);
 
@@ -64,24 +62,38 @@ public class Rotation
         /*
         Getting the increment as per the quadrant in which the point lies with respect to the target point as that of the origin_cordinates
         */
-        if (updated_tc.X < 0)
+
+        /*
+        The power here determines which power to be used as per the quadrant x_p in the first and the third, 
+        whereas y_p in the second and the fourth
+
+        this is because in the 1st and 3rd quadrant the angle needs to be calculated from the x-axis and in the 2nd and the 4th quadrant from the y-axis
+        */
+        float power = x_p;
+
+        if (updated_tc.x < 0)
         {
-            if (updated_tc.Y < 0)
+            if (updated_tc.y < 0)
             {
                 increment = 90;
+                power = y_p;
             }
-            else if (updated_tc.Y > 0)
+            else if (updated_tc.y > 0)
             {
                 increment = 180;
             }
         }
-        else if (updated_tc.X > 0 && updated_tc.Y > 0)
+        else if (updated_tc.x > 0 && updated_tc.y > 0)
         {
             increment = 270;
+            power = y_p;
         }
 
 
-        return (x_p * per_p) + increment;
-    }
 
+        return (power * per_p) + increment;
+    }
 }
+
+// Note 
+// change the Vector.x and Vector.y to upper_case the lower_case as per your need....
